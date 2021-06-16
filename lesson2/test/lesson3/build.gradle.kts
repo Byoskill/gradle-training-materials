@@ -12,9 +12,11 @@ tasks.register("myproperties") {
         //     outputs.dir generatedFileDir
         var folder = layout.buildDirectory.dir("generated");
         mkdir(folder)
-        
+
         val propFile = folder.get().file("server.properties");
         propFile.asFile.writeText("gni")
+
+        outputs.dir(folder)
     }   
 }
 
